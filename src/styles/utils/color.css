@@ -1,0 +1,58 @@
+/** Color System */
+
+.bg-base { background-color: var(--clr-base); }
+.bg-base-d-1 { background-color: var(--clr-base-d-1); }
+.bg-base-d-2 { background-color: var(--clr-base-d-2); }
+.bg-base-d-3 { background-color: var(--clr-base-d-3); }
+.bg-base-l-1 { background-color: var(--clr-base-l-1); }
+.bg-base-l-2 { background-color: var(--clr-base-l-2); }
+.bg-base-l-3 { background-color: var(--clr-base-l-3); }
+
+.bg-accent { background-color: var(--clr-accent); }
+.bg-accent-l-1 { background-color: var(--clr-accent-l-1); }
+.bg-accent-l-2 { background-color: var(--clr-accent-l-2); }
+.bg-accent-l-3 { background-color: var(--clr-accent-l-3); }
+
+.bg-dark { background-color: var(--clr-dark); }
+
+.bg-light { background-color: var(--clr-light); }
+
+.text-base { color: var(--clr-base); }
+.text-base-d-1 { color: var(--clr-base-d-1); }
+.text-base-d-2 { color: var(--clr-base-d-2); }
+.text-base-d-3 { color: var(--clr-base-d-3); }
+.text-base-l-1 { color: var(--clr-base-l-1); }
+.text-base-l-2 { color: var(--clr-base-l-2); }
+.text-base-l-3 { color: var(--clr-base-l-3); }
+
+.text-accent { color: var(--clr-accent); }
+.text-accent-l-1 { color: var(--clr-accent-l-1); }
+.text-accent-l-2 { color: var(--clr-accent-l-2); }
+.text-accent-l-3 { color: var(--clr-accent-l-3); }
+
+.text-dark { color: var(--clr-dark); }
+
+.text-light { color: var(--clr-light); }
+
+
+.border-base { border-color: var(--clr-base); }
+.border-base-d-1 { border-color: var(--clr-base-d-1); }
+.border-base-d-2 { border-color: var(--clr-base-d-2); }
+.border-base-d-3 { border-color: var(--clr-base-d-3); }
+.border-base-l-1 { border-color: var(--clr-base-l-1); }
+.border-base-l-2 { border-color: var(--clr-base-l-2); }
+.border-base-l-3 { border-color: var(--clr-base-l-3); }
+
+.border-accent { border-color: var(--clr-accent); }
+.border-accent-l-1 { border-color: var(--clr-accent-l-1); }
+.border-accent-l-2 { border-color: var(--clr-accent-l-2); }
+.border-accent-l-3 { border-color: var(--clr-accent-l-3); }
+
+.border-dark { border-color: var(--clr-dark); }
+
+
+.bg-body { background-color: var(--bg-body); }
+
+
+
+

@@ -1,0 +1,77 @@
+:root {
+  /** Font Families */
+  --ff-title: "Bluu Next", sans-serif;
+  --ff-base: "EB Garamond Variable", serif;
+
+  /** Base Colors */
+  --base-l-3: 26 52% 90%;
+  --base-l-2: 27 49% 79%;
+  --base-l-1: 27 47% 69%;
+  --base: 28 45% 58%;
+  --base-d-1: 28 31% 43%;
+  --base-d-2: 28 29% 28%;
+  --base-d-3: 27 25% 15%;
+  --accent: 357 93% 46%;
+  --accent-l-1: 9 88% 62%;
+  --accent-l-2: 11 100% 76%;
+  --accent-l-3: 13 100% 88;
+  --light: 28 44% 92%;
+  --dark: 0 100% 2%;
+
+  /** Formatted Color */
+  --clr-base-l-3: hsl(26 52% 90%);
+  --clr-base-l-2: hsl(27 49% 79%);
+  --clr-base-l-1: hsl(27 47% 69%);
+  --clr-base: hsl(28 45% 58%);
+  --clr-base-d-1: hsl(28 31% 43%);
+  --clr-base-d-2: hsl(28 29% 28%);
+  --clr-base-d-3: hsl(27 25% 15%);
+
+  --clr-accent: hsl(357 93% 46%);
+  --clr-accent-l-1: hsl(9 88% 62%);
+  --clr-accent-l-2: hsl(11 100% 76%);
+  --clr-accent-l-3: hsl(13 100% 88%);
+
+  --clr-light: hsl(28 44% 92%);
+  --clr-dark: hsl(0 100% 2%);
+
+  --shadow-primary: hsl(var(--dark) / 0.25);
+
+  /** Spacing */
+  --space-4xs: clamp(0.24rem, calc(-0.2vw + 0.28rem), 0.11rem);
+  --space-3xs: clamp(0.32rem, calc(-0.22vw + 0.37rem), 0.17rem);
+  --space-2xs: clamp(0.42rem, calc(-0.22vw + 0.47rem), 0.27rem);
+  --space-xs: clamp(0.56rem, calc(-0.19vw + 0.61rem), 0.44rem);
+  --space-s: clamp(0.75rem, calc(-0.07vw + 0.77rem), 0.7rem);
+  --space-m: clamp(1rem, calc(0.19vw + 0.96rem), 1.13rem);
+  --space-l: clamp(1.33rem, calc(0.7vw + 1.17rem), 1.8rem);
+  --space-xl: clamp(1.78rem, calc(1.66vw + 1.39rem), 2.88rem);
+  --space-2xl: clamp(2.37rem, calc(3.36vw + 1.58rem), 4.61rem);
+  --space-3xl: clamp(3.16rem, calc(6.33vw + 1.67rem), 7.37rem);
+  --space-4xl: clamp(4.21rem, calc(11.4vw + 1.54rem), 11.8rem);
+
+  /** Font Size */
+  --fs-xs: clamp(0.5rem, calc(0vw + 0.5rem), 0.5rem);
+  --fs-s: clamp(0.71rem, calc(0.06vw + 0.69rem), 0.75rem);
+  --fs-m: clamp(1rem, calc(0.19vw + 0.96rem), 1.13rem);
+  --fs-l: clamp(1.41rem, calc(0.41vw + 1.32rem), 1.69rem);
+  --fs-xl: clamp(2rem, calc(0.8vw + 1.81rem), 2.53rem);
+  --fs-2xl: clamp(2.83rem, calc(1.46vw + 2.49rem), 3.8rem);
+  --fs-3xl: clamp(4rem, calc(2.55vw + 3.4rem), 5.7rem);
+  --fs-4xl: clamp(5.65rem, calc(4.34vw + 4.63rem), 8.54rem);
+
+  /** Border Radius */
+  --radius-xs: clamp(0.25rem, calc(0vw + 0.25rem), 0.25rem);
+  --radius-s: clamp(0.38rem, calc(-0.19vw + 0.54rem), 0.5rem);
+  --radius-m: clamp(0.63rem, calc(-0.19vw + 0.79rem), 0.75rem);
+  --radius-l: clamp(1rem, calc(-0.38vw + 1.34rem), 1.25rem);
+  --radius-xl: clamp(1.63rem, calc(-0.56vw + 2.13rem), 2rem);
+  --radius-full: 999rem;
+
+  /** Box Shadows */
+  --shadow-xs: 0 1px 2px var(--shadow-primary);
+  --shadow-s: 0 1.5px 3px var(--shadow-primary);
+  --shadow-m: 0 2px 6px var(--shadow-primary);
+  --shadow-l: 0 3px 12px var(--shadow-primary);
+  --shadow-xl: 0 6px 48px var(--shadow-primary);
+}

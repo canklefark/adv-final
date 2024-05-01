@@ -1,0 +1,93 @@
+---
+import navData from "../data/site-map.json";
+---
+
+<!-- <nav>
+  <ul
+    id="primary-navigation"
+    class="primary-navigation underline-indicators | list-none flex"
+    data-visible="false">
+    {
+      navLinks.map((name: string, index: number) => (
+        <li class={index === 0 ? "active" : ""}>
+          <a class="uppercase text-light letter-spacing-3" href={name}>
+            <span aria-hidden="true">00</span>
+            {name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav> -->
+<nav>
+  <ul
+    id="primary-navigation"
+    class="primary-navigation | list-none flex"
+    data-visible="false">
+    {
+      navData.map((item) => (
+        <li>
+          <a class="uppercase text-light letter-spacing-3" href={item.url}>
+            {item.text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  nav {
+    order: 2;
+  }
+
+  .primary-navigation {
+    --gap: var(--space-l);
+
+    background: hsl(var(--base) / 0.1);
+    font-weight: 600;
+    backdrop-filter: blur(1.5rem);
+    margin: 2rem 0;
+    /* padding: var(--space-l) var(--space-3xl); */
+    padding: calc(var(--space-xl) * 0.75) var(--space-3xl);
+
+    border-radius: var(--radius-m) 0 0 var(--radius-m);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: 35rem) {
+    .primary-navigation {
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      background: hsl(var(--base-d-2) / 0.75);
+      font-size: var(--fs-2xl);
+      border-radius: unset;
+
+      inset: 0;
+      margin: 0;
+      padding: min(20rem, 15vh) var(--space-xl);
+      z-index: 1000;
+      transform: translateX(100%);
+      transition: transform 500ms ease-in-out;
+
+      & a {
+        color: var(--clr-accent);
+      }
+
+      &[data-visible="true"] {
+        transform: translateX(0%);
+      }
+    }
+  }
+  @media (min-width: 35em) and (max-width: 47.9999em) {
+    .primary-navigation {
+      margin-block: 0;
+      padding: calc(var(--space-xl) * 0.75) var(--space-xl);
+      letter-spacing: 1px;
+    }
+  }
+</style>

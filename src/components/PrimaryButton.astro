@@ -1,0 +1,46 @@
+---
+const { btnText, btnUrl } = Astro.props;
+---
+
+<a
+  href={btnUrl}
+  class="primary-button | uppercase ff-base fs-xl bg-base text-dark radius-full"
+  ><span class="text-center">{btnText}</span></a
+>
+
+<style>
+  .primary-button {
+    font-size: 2rem;
+    position: relative;
+    display: inline-grid;
+    z-index: 1;
+    place-items: center;
+    padding: 0 2em;
+    aspect-ratio: 1;
+    text-decoration: none;
+
+    & > span {
+      max-width: 15ch;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: hsl(var(--base) / 0.15);
+      border-radius: 50%;
+      opacity: 0;
+      transition:
+        opacity 500ms linear,
+        transform 500ms ease-in-out;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+</style>

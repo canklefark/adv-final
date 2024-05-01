@@ -1,0 +1,94 @@
+---
+import { Image, getImage } from "astro:assets";
+
+import bgHome from "../assets/background-images/home/bg-home.png";
+import bgCreatures from "../assets/background-images/creatures/bg-creatures.png";
+import texture from "../assets/texture/texture.png";
+
+const { page } = Astro.props;
+
+let bgImage;
+if (page.toLowerCase() === "home") {
+  bgImage = await getImage({ src: bgHome });
+} else if (page.toLowerCase() === "creatures") {
+  bgImage = await getImage({ src: bgCreatures });
+}
+---
+
+<body style={`background-image: url('${bgImage.src}')`}>
+  <Image src={texture} alt="" />
+  <slot />
+</body>
+
+<style>
+  body {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+  img {
+    aspect-ratio: unset;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+
+    opacity: 0.75;
+    z-index: 9999;
+  }
+
+  /* 
+  .home {
+    background-image: url(/background-images/home/bg-home.png);
+  }
+
+  .creatures {
+    background-image: url(/background-images/creatures/bg-creatures.jpg);
+  }
+
+  .people {
+    background-image: url(/background-images/people/bg-people.jpg);
+  }
+
+  .places {
+    background-image: url(/background-images/places/bg-places.jpg);
+  }
+  @media (max-width: 48rem) {
+    .home {
+      background-image: url(/background-images/home/bg-home-tablet.jpg);
+    }
+
+    .creatures {
+      background-image: url(/background-images/creatures/bg-creatures-tablet.jpg);
+    }
+
+    .people {
+      background-image: url(/background-images/people/bg-people-tablet.jpg);
+    }
+
+    .places {
+      background-image: url(/background-images/places/bg-places-tablet.jpg);
+    }
+  }
+
+  @media (max-width: 30rem) {
+    .home {
+      background-image: url(/background-images/home/bg-home-mobile.jpg);
+    }
+
+    .creatures {
+      background-image: url(/background-images/creatures/bg-creatures-mobile.jpg);
+    }
+    .people {
+      background-image: url(/background-images/people/bg-people-mobile.jpg);
+    }
+
+    .places {
+      background-image: url(/background-images/places/bg-places-mobile.jpg);
+    }
+  } */
+</style>

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Herbert West",
+    "image": "../../assets/creatures/dagon.png",
+    "description": "A reanimator, obsessed with bringing the dead back to life. His experiments blur the lines between life and death, with disastrous consequences.",
+    "url": "/people"
+  },
+  {
+    "name": "Dr. Henry Armitage",
+    "image": "../../assets/creatures/dagon.png",
+    "description": "A university professor who investigates the Cthulhu Mythos and its cultists. He often serves as a witness to the horrors of the looming eldritch apocalypse.",
+    "url": "/people/dr-armitage"
+  },
+  {
+    "name": "Randolph Carter",
+    "image": "../../assets/creatures/dagon.png",
+    "description": "A dreamer and explorer of forbidden dimensions. His fantastical journeys take him to places beyond human comprehension, where he encounters unimaginable entities.",
+    "url": "/creatures/carter"
+  }
+]

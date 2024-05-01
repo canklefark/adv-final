@@ -1,0 +1,20 @@
+.bg-blur-xs {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.bg-blur-s {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.bg-blur-m {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.bg-blur-l {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+.bg-blur-xl {
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+}

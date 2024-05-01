@@ -1,0 +1,79 @@
+---
+import PrimaryNav from "../components/PrimaryNav.astro";
+import logo from "../assets/shared/logo.svg";
+---
+
+<header class="primary-header | flex space-between items-middle">
+  <div class="logo"><img src={logo.src} alt="space tourism logo" /></div>
+  <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+    <span class="visually-hidden" aria-expanded="false">Menu</span>
+  </button>
+  <PrimaryNav />
+</header>
+
+<style>
+  .primary-header {
+    --gap: 0;
+
+    /* margin-block-end: var(--space-xl); */
+  }
+
+  .logo {
+    margin-inline-start: var(--space-xl);
+
+    img {
+      max-width: unset;
+    }
+  }
+
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+  @media (min-width: 35rem) and (max-width: 48rem) {
+    .primary-header {
+      margin-block-end: var(--space-xl);
+    }
+  }
+
+  @media (max-width: 35rem) {
+    .logo {
+      margin: var(--space-l);
+    }
+    .mobile-nav-toggle {
+      display: block;
+      position: absolute;
+      z-index: 2000;
+      top: 2rem;
+      right: 1rem;
+      background: transparent;
+      background-image: url(/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 1.5rem;
+      aspect-ratio: 1;
+      border: 0;
+
+      &[aria-expanded="true"] {
+        background-image: url(/icon-close.svg);
+      }
+    }
+  }
+</style>
+
+<script>
+  const nav = document.querySelector(".primary-navigation");
+  const navToggle = document.querySelector(".mobile-nav-toggle");
+
+  navToggle.addEventListener("click", () => {
+    const visibility = nav.getAttribute("data-visible");
+
+    if (visibility === "false") {
+      nav.setAttribute("data-visible", "true");
+      navToggle.setAttribute("aria-expanded", "true");
+    } else {
+      nav.setAttribute("data-visible", "false");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>

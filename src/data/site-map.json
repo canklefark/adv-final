@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Home",
+    "url": "/"
+  },
+  {
+    "text": "Creatures",
+    "url": "/creatures"
+  },
+  {
+    "text": "People",
+    "url": "/people"
+  },
+  {
+    "text": "Places",
+    "url": "/places"
+  }
+]

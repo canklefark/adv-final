@@ -1,0 +1,16 @@
+---
+import Head from "./Head.astro";
+import Body from "./Body.astro";
+import Header from "../components/Header.astro";
+import "../styles/main.css";
+
+const { pageTitle, page, class: className } = Astro.props;
+---
+
+<Head pageTitle={pageTitle}>
+  <Body page={page}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <slot />
+  </Body>
+</Head>
