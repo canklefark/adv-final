@@ -1,0 +1,110 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import locationData from '../../data/locations.json';
+
+import rlyeh from '../../assets/locations/rlyeh.jpg';
+
+const pageTitle = 'Mountains of Madness'; // Change for each Creature
+const page = 'Creatures';
+---
+
+<BaseLayout pageTitle={pageTitle} page={page}>
+  <main id="main" class="">
+    <div class="grid-container grid-template">
+      <h1 class="location-title | fs-xl text-base">Locations of Mythos</h1>
+
+      <article class="location-content | flow">
+        <h2 class="fs-3xl text-accent">{locationData[1].name}</h2>
+        <p class="">{locationData[1].description}</p>
+      </article>
+
+      <Image src={rlyeh} alt={`A dipiction of ${locationData[1].name}`} />
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .container {
+    /* outline: 2.5px dashed pink; */
+  }
+
+  .grid-container {
+    outline: 1px solid limegreen;
+
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0, 38rem)) minmax(2em, 1fr);
+    align-items: center;
+    gap: var(--space-l);
+    height: 100%;
+
+    & > * {
+      outline: 1px solid red;
+    }
+  }
+
+  .grid-template {
+    grid-template-areas:
+      '. title title .'
+      '. content image image'
+      '. content image image'
+      '. . . .';
+  }
+
+  .location-title {
+    grid-area: title;
+  }
+
+  .location-content {
+    grid-area: content;
+  }
+
+  img {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: bottom center;
+  }
+
+  article {
+    --flow-space: var(--space-s);
+
+    p {
+      max-width: 50ch;
+      text-wrap: balance;
+      margin-block-start: var(--space-l);
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .grid-container {
+      grid-template-columns: unset;
+      place-items: center;
+    }
+
+    .grid-template {
+      grid-template-areas:
+        'title'
+        'image'
+        'content';
+    }
+
+    article {
+      text-align: center;
+    }
+
+    img {
+      justify-self: center;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 48rem) and (min-aspect-ratio: 6/4) {
+    .container {
+      align-self: end;
+    }
+  }
+</style>

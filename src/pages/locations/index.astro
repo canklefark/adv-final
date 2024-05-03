@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import locationData from '../../data/locations.json';
+
+import rlyeh from '../../assets/locations/rlyeh.png';
+
+const pageTitle = "R'lyeh"; // Change for each Creature
+const page = 'Creatures';
+---
+
+<BaseLayout pageTitle={pageTitle} page={page}>
+  <main id="main" class="grid-container grid-template">
+    <h1 class="location-title | fs-l text-base">Locations of Mythos</h1>
+
+    <article class="location-content | flow">
+      <h2 class="fs-3xl text-accent">{locationData[0].name}</h2>
+      <p class="">{locationData[0].description}</p>
+    </article>
+
+    <Image src={rlyeh} alt={`A dipiction of ${locationData[0].name}`} />
+  </main>
+</BaseLayout>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0, 38rem)) minmax(2em, 1fr);
+    align-items: center;
+    margin-block-end: var(--space-l);
+
+    /* outline: 1px solid limegreen; */
+
+    & > * {
+      /* outline: 1px solid red; */
+    }
+  }
+
+  .grid-template {
+    grid-template-areas:
+      '. title title .'
+      '. content image image'
+      '. content image image';
+  }
+
+  .location-title {
+    grid-area: title;
+  }
+
+  .location-content {
+    --flow-space: var(--space-m);
+
+    grid-area: content;
+    padding-inline-end: var(--space-l);
+
+    p {
+      max-width: 55ch;
+      text-wrap: balance;
+    }
+  }
+
+  img {
+    grid-area: image;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: bottom center;
+    border: 1px solid hsl(var(--base) / 0.2);
+    border-top-left-radius: var(--radius-m);
+    border-bottom-left-radius: var(--radius-m);
+  }
+
+  @media (max-width: 48rem) {
+    .grid-container {
+      grid-template-columns: unset;
+      place-items: center;
+
+      & * + * {
+        margin-block-start: 1em;
+      }
+    }
+
+    .grid-template {
+      grid-template-areas:
+        'title'
+        'image'
+        'content';
+    }
+
+    .location-title {
+      width: max-content;
+      place-self: start;
+      padding: 0 2rem 2rem;
+    }
+
+    .location-content {
+      text-align: center;
+    }
+
+    img {
+      border-radius: unset;
+    }
+  }
+</style>

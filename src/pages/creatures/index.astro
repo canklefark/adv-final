@@ -1,12 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import dagon from "../../assets/creatures/dagon.png";
-import TabList from "../../components/TabList.astro";
-import creatureData from "../../data/creatures.json";
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import dagon from '../../assets/creatures/dagon.png'; // Change this to Chthulu
+import TabList from '../../components/TabList.astro';
+import creatureData from '../../data/creatures.json';
 
-const pageTitle = "Creatures";
-const page = "Creatures";
+const pageTitle = 'Chthulu'; // Change for each Creature
+const page = 'Creatures';
 ---
 
 <BaseLayout pageTitle={pageTitle} page={page}>
@@ -17,8 +17,8 @@ const page = "Creatures";
         <div class="image-wrapper">
           <Image
             src={dagon}
-            alt={`${creatureData[2].name}`}
-            id={`${creatureData[2].name.toLowerCase()}-image`}
+            alt={`${creatureData[0].name}`}
+            id={`${creatureData[0].name.toLowerCase()}-image`}
             data-hidden=""
           />
         </div>
@@ -33,7 +33,6 @@ const page = "Creatures";
           }))}
         />
 
-        <!-- Moon  -->
         <article
           id={`${creatureData[0].name.toLowerCase()}-tab`}
           role="tabpanel"
@@ -99,7 +98,7 @@ const page = "Creatures";
       }
 
       & h2::after {
-        content: "";
+        content: '';
         position: absolute;
         bottom: calc(-1 * calc(var(--space-m) * 0.5));
         left: 0;
