@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+
+import rlyehIcon from "../assets/icons/rlyeh-icon.svg";
+import madnessIcon from "../assets/icons/madness-icon.svg";
+import plateauIcon from "../assets/icons/plateau-icon.svg";
+import locationData from "../data/locations.json";
+
+const locationIcons = {
+  "R'lyeh": rlyehIcon,
+  "Mountains of Madness": madnessIcon,
+  "Plateau of Leng": plateauIcon,
+};
+
+const { tabData, ariaLabel } = Astro.props;
+---
+
+<nav class="icon-tabs | flex flex-column">
+  {
+    locationData.map((data, index) => (
+      <a class="text-light flex flex-column" href={data.url}>
+        <span class="fs-s text-center">{data.name}</span>
+        <Image src={locationIcons[data.name]} alt="" />
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  .icon-tabs {
+    grid-area: nav;
+
+    a {
+      --gap: var(--space-xs);
+
+      background-color: hsl(var(--base-d-3) / 1);
+      padding: 0.75em;
+      border: 1px solid hsl(var(--base) / 0.25);
+      border-radius: var(--radius-xs);
+      transition:
+        background-color 0.3s ease,
+        transform 0.3s ease-in-out,
+        rotate 0.3s ease,
+        scale 0.3s ease;
+
+      &:hover,
+      &:focus-within {
+        background-color: hsl(var(--base-d-2) / 1);
+        transform: translateY(-5px);
+        rotate: -2deg;
+      }
+    }
+
+    img {
+      width: 100%;
+      order: -1;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .icon-tabs {
+      grid-area: nav;
+      flex-direction: row;
+
+      a {
+        &:hover,
+        &:focus-within {
+          transform: translateY(-3px);
+          rotate: 0deg;
+          scale: 1.05;
+        }
+      }
+    }
+  }
+
+  @media (hover) {
+    /* Hides the link text when hover is available */
+    span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+</style>

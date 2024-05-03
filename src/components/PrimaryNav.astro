@@ -2,24 +2,7 @@
 import navData from "../data/site-map.json";
 ---
 
-<!-- <nav>
-  <ul
-    id="primary-navigation"
-    class="primary-navigation underline-indicators | list-none flex"
-    data-visible="false">
-    {
-      navLinks.map((name: string, index: number) => (
-        <li class={index === 0 ? "active" : ""}>
-          <a class="uppercase text-light letter-spacing-3" href={name}>
-            <span aria-hidden="true">00</span>
-            {name}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</nav> -->
-<nav>
+<nav id="primary-navigation">
   <ul
     id="primary-navigation"
     class="primary-navigation | list-none flex"
@@ -39,29 +22,52 @@ import navData from "../data/site-map.json";
 <style>
   nav {
     order: 2;
+    background: hsl(var(--base) / 0.1);
+    font-weight: 600;
+    backdrop-filter: blur(1.5rem);
+    margin: 2rem 0;
+    padding: calc(var(--space-xl) * 0.75) var(--space-3xl);
+    border-radius: var(--radius-m) 0 0 var(--radius-m);
   }
 
   .primary-navigation {
     --gap: var(--space-l);
 
-    background: hsl(var(--base) / 0.1);
-    font-weight: 600;
-    backdrop-filter: blur(1.5rem);
-    margin: 2rem 0;
-    /* padding: var(--space-l) var(--space-3xl); */
-    padding: calc(var(--space-xl) * 0.75) var(--space-3xl);
+    padding: 0;
+    margin: 0;
 
-    border-radius: var(--radius-m) 0 0 var(--radius-m);
+    li {
+      transition: scale 0.3s ease;
+    }
 
     a {
-      text-decoration: none;
+      transition: text-decoration 0.3s ease;
+    }
+
+    &:hover > li,
+    &:focus-within > li {
+      scale: 0.95;
+      opacity: 0.3;
+
+      > a {
+        text-decoration: line-through;
+      }
+    }
+
+    &:hover > li:hover,
+    &:focus-within > li:focus-within {
+      scale: 1;
+      opacity: 1;
+
+      > a {
+        color: var(--clr-accent);
+        text-decoration: none;
+      }
     }
   }
 
   @media (max-width: 35rem) {
-    .primary-navigation {
-      flex-direction: column;
-      align-items: center;
+    nav {
       position: fixed;
       background: hsl(var(--base-d-2) / 0.75);
       font-size: var(--fs-2xl);
@@ -74,20 +80,24 @@ import navData from "../data/site-map.json";
       transform: translateX(100%);
       transition: transform 500ms ease-in-out;
 
-      & a {
-        color: var(--clr-accent);
-      }
-
       &[data-visible="true"] {
         transform: translateX(0%);
       }
     }
+
+    .primary-navigation {
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        color: var(--clr-accent);
+      }
+    }
   }
   @media (min-width: 35em) and (max-width: 47.9999em) {
-    .primary-navigation {
+    nav {
       margin-block: 0;
       padding: calc(var(--space-xl) * 0.75) var(--space-xl);
-      letter-spacing: 1px;
     }
   }
 </style>

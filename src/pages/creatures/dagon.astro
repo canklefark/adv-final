@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import dagon from "../../assets/creatures/dagon.png";
+import FileTabs from "../../components/FileTabs.astro";
+import creatureData from "../../data/creatures.json";
+
+const creatureNames = creatureData.map((creature) => creature.name);
+const pageTitle = creatureNames[2];
+const page = "Creatures";
+---
+
+<BaseLayout pageTitle={pageTitle} page={page}>
+  <main id="main" class="container">
+    <div class="columns-2 column--on-m">
+      <div class="left-col | flex flex-column">
+        <h1 class="fs-l text-base">Dwellers of Mythos</h1>
+        <div class="image-wrapper">
+          <Image
+            src={dagon}
+            alt={`${creatureData[2].name}`}
+            id={`${creatureData[2].name.toLowerCase()}-image`}
+          />
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <FileTabs
+          activeCreature={pageTitle}
+          ariaLabel="creature list"
+          tabData={creatureData.map((creature) => ({
+            name: creature.name,
+            url: creature.url,
+          }))}
+        />
+
+        <article id={`${creatureData[2].name.toLowerCase()}-tab`}>
+          <div class="text-wrapper flex flex-column">
+            <h2 class="fs-2xl text-accent">{creatureData[2].name}</h2>
+
+            <p class="text-dark">{creatureData[2].description}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .container {
+    /* outline: 5px dotted pink; */
+    padding-block-end: 2rem;
+  }
+
+  .columns-2 {
+    --gap: var(--space-m);
+    height: 100%;
+    align-items: center;
+
+    & p {
+      max-width: 55ch;
+    }
+  }
+
+  img {
+    height: 100%;
+    max-height: 600px;
+    width: auto;
+    /* justify-self: center; */
+  }
+
+  article {
+    position: relative;
+    background-color: var(--clr-base-l-1);
+    padding: var(--space-m);
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+  }
+
+  .text-wrapper {
+    background-color: var(--clr-light);
+    padding: var(--space-m);
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px -5px var(--shadow-primary);
+
+    h2 {
+      position: relative;
+      line-height: 1;
+    }
+
+    & h2::after {
+      content: "";
+      position: absolute;
+      bottom: calc(-1 * calc(var(--space-m) * 0.5));
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: hsl(var(--dark) / 0.25);
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .columns-2 {
+      --gap: var(--space-xl);
+    }
+
+    .left-col {
+      align-items: center;
+    }
+
+    h1 {
+      place-self: start;
+    }
+
+    .content-wrapper {
+      width: max-content;
+      justify-self: center;
+    }
+
+    .text-wrapper {
+      align-items: center;
+    }
+  }
+</style>

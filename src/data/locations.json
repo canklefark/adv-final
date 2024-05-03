@@ -1,20 +1,23 @@
 [
   {
     "name": "R'lyeh",
-    "image": "../../assets/places/rlyeh.png",
+    "image": "../../assets/locations/rlyeh.png",
     "description": "This  cyclopean  city  isn't  just  sunken  beneath  the  waves,  it  broods  malignantly  on  the  ocean  floor.  Cyclopean  structures  of  black  basalt  erupt  from  the  depths,  their  geometry  both  alien  and  oppressive.  The  city  pulsates  with  an  otherworldly  light,  emitted  by  phosphorescent  fungus  clinging  to  the  stone.  Should  the  stars  align  in  a  forbidden  configuration,  R'lyeh  will  rise  from  the  depths,  bringing  Cthulhu  and  his  dark  court  with  it.",
-    "url": "/places"
+    "url": "/locations",
+    "icon": "../assets/icons/rlyeh-icon.svg"
   },
   {
     "name": "Mountains of Madness",
-    "image": "../../assets/places/mountains-of-madness.png",
+    "image": "../../assets/locations/mountains-of-madness.png",
     "description": "Imagine  a  landscape  twisted  by  some  eldritch  force.  Instead  of  snow-capped  peaks,  the  Mountains  of  Madness  are  jagged  monoliths  of  unnatural  green  stone,  veined  with  luminous  minerals  that  cast  an  eerie  glow.  The  air  is  thin  and  cold,  carrying  the  whispers  of  forgotten  winds.  Crumbling  cities  of  cyclopean  architecture  dot  the  blasted  plains,  evidence  of  the  Elder  Things,  a  once-great  alien  race  driven  mad  by  their  forbidden  knowledge.",
-    "url": "/places/mountains-of-madness"
+    "url": "/locations/mountains-of-madness",
+    "icon": "../assets/icons/rlyeh-icon.svg"
   },
   {
     "name": "Plateau of Leng",
-    "image": "../../assets/places/plateau-of-leng.png",
+    "image": "../../assets/locations/plateau-of-leng.png",
     "description": "This  blasted  wasteland  defies  human  comprehension.  Imagine  a  desert  stretched  across  an  infinite  plane,  yet  it  exists  outside  of  normal  time  and  space.  The  sky  is  a  shifting  mass  of  unnatural  colors,  and  the  land  is  strewn  with  the  ruins  of  forgotten  civilizations  built  from  unidentifiable  black  stone.  Shoggoths,  amoeba-like  creatures  of  pure  id,  wriggle  across  the  wasteland,  their  blind  eyes  searching  for  victims.  The  very  air  of  the  Plateau  of  Leng  is  heavy  with  malignancy,  slowly  sapping  the  sanity  of any unfortunate  visitor.",
-    "url": "/places/plateau-of-leng"
+    "url": "/locations/plateau-of-leng",
+    "icon": "../assets/icons/rlyeh-icon.svg"
   }
 ]
