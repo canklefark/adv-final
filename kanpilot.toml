@@ -7,52 +7,8 @@ id = "process1"
 name = "To Do"
 
   [[processes.tasks]]
-  id = "y63ql0m394ozyfovphhomfbl"
-  title = "Create primary nav hover"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "aipazdmgswk8y2mxup3ytxyd"
-  title = "Change location pages to 3 column grid"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
   id = "kb0aawnx08si233skpy98zg8"
   title = "Change images to eager load"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "n5aqxn21eck5ybgbi22dd5h4"
-  title = "Add background for people"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "scv72pjeo032g5xy0l6qzywk"
-  title = "Add background for locations"
   description = ""
   tag = "backlog"
   linkFiles = [ ]
@@ -84,17 +40,6 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "gr4iikxt9ruremcaze3hxwc1"
-  title = "Change all page attributes to reflect proper background image"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
   id = "vsx1gxlnq91b253brwwn9cir"
   title = "Location page doesn't stop at max-width"
   description = "<p></p>"
@@ -117,6 +62,61 @@ name = "Done"
   [[processes.tasks]]
   id = "era6pnv2ukgvoj01fo6r8apv"
   title = "Create location tab indicator"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "y63ql0m394ozyfovphhomfbl"
+  title = "Create primary nav hover"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "aipazdmgswk8y2mxup3ytxyd"
+  title = "Change location pages to 3 column grid"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "n5aqxn21eck5ybgbi22dd5h4"
+  title = "Add background for people"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "scv72pjeo032g5xy0l6qzywk"
+  title = "Add background for locations"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "gr4iikxt9ruremcaze3hxwc1"
+  title = "Change all page attributes to reflect proper background image"
   description = ""
   tag = "backlog"
   linkFiles = [ ]

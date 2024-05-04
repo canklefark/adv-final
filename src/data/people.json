@@ -2,19 +2,19 @@
   {
     "name": "Herbert West",
     "image": "../../assets/creatures/dagon.png",
-    "description": "A reanimator, obsessed with bringing the dead back to life. His experiments blur the lines between life and death, with disastrous consequences.",
+    "description": "A brilliant yet morally bankrupt scientist, Herbert West is consumed by  the desire to cheat death. His experiments in reanimation blur the lines between life  and death, creating monstrosities that hunger for the living. West is a charismatic  sociopath, able to manipulate others into helping him acquire fresh subjects for his  grisly experiments.",
     "url": "/people"
   },
   {
     "name": "Dr. Henry Armitage",
     "image": "../../assets/creatures/dagon.png",
-    "description": "A university professor who investigates the Cthulhu Mythos and its cultists. He often serves as a witness to the horrors of the looming eldritch apocalypse.",
+    "description": "A respected university professor of literature, Henry Armitage  stumbles upon the horrors of the Cthulhu Mythos almost by accident. Driven by a morbid curiosity and a strong sense of justice, he investigates the activities of suspected cults and the murmurs of ancient evil. Armitage is a beacon of rationality in a world  teetering on the brink of cosmic horror, but his sanity is constantly threatened by the unspeakable truths he uncovers.",
     "url": "/people/dr-armitage"
   },
   {
     "name": "Randolph Carter",
     "image": "../../assets/creatures/dagon.png",
-    "description": "A dreamer and explorer of forbidden dimensions. His fantastical journeys take him to places beyond human comprehension, where he encounters unimaginable entities.",
-    "url": "/creatures/carter"
+    "description": "A young man haunted by dreams of strange lands and alien beings, Randolph Carter is a dreamer and explorer of the forbidden. Through his dreams, he travels to dimensions beyond human comprehension, encountering unimaginable entities and witnessing wonders and terrors that shatter his sanity. Carter is a tragic figure, drawn to the forbidden knowledge of the cosmos",
+    "url": "/people/carter"
   }
 ]

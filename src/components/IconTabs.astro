@@ -1,15 +1,15 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
-import rlyehIcon from "../assets/icons/rlyeh-icon.svg";
-import madnessIcon from "../assets/icons/madness-icon.svg";
-import plateauIcon from "../assets/icons/plateau-icon.svg";
-import locationData from "../data/locations.json";
+import rlyehIcon from '../assets/icons/rlyeh-icon.svg';
+import madnessIcon from '../assets/icons/madness-icon.svg';
+import plateauIcon from '../assets/icons/plateau-icon.svg';
+import locationData from '../data/locations.json';
 
 const locationIcons = {
   "R'lyeh": rlyehIcon,
-  "Mountains of Madness": madnessIcon,
-  "Plateau of Leng": plateauIcon,
+  'Mountains of Madness': madnessIcon,
+  'Plateau of Leng': plateauIcon,
 };
 
 const { tabData, ariaLabel } = Astro.props;
@@ -28,6 +28,7 @@ const { tabData, ariaLabel } = Astro.props;
 
 <style>
   .icon-tabs {
+    --gap: var(--space-m);
     grid-area: nav;
 
     a {

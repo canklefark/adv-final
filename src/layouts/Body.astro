@@ -1,17 +1,23 @@
 ---
-import { Image, getImage } from "astro:assets";
+import { Image, getImage } from 'astro:assets';
 
-import bgHome from "../assets/background-images/home/bg-home.png";
-import bgCreatures from "../assets/background-images/creatures/bg-creatures.png";
-import texture from "../assets/texture/texture.png";
+import bgHome from '../assets/background-images/home/bg-home.png';
+import bgCreatures from '../assets/background-images/creatures/bg-creatures.png';
+import bgLocations from '../assets/background-images/locations/bg-locations.png';
+import bgPeople from '../assets/background-images/people/bg-people.png';
+import texture from '../assets/texture/texture.png';
 
 const { page } = Astro.props;
 
 let bgImage;
-if (page.toLowerCase() === "home") {
+if (page.toLowerCase() === 'home') {
   bgImage = await getImage({ src: bgHome });
-} else if (page.toLowerCase() === "creatures") {
+} else if (page.toLowerCase() === 'creatures') {
   bgImage = await getImage({ src: bgCreatures });
+} else if (page.toLowerCase() === 'locations') {
+  bgImage = await getImage({ src: bgLocations });
+} else {
+  bgImage = await getImage({ src: bgPeople });
 }
 ---
 

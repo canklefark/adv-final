@@ -4,11 +4,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import locationData from "../../data/locations.json";
 
-import rlyeh from "../../assets/locations/rlyeh.png";
+import madness from "../../assets/locations/madness.png";
 import IconTabs from "../../components/IconTabs.astro";
 
 const pageTitle = "Mountains of Madness";
-const page = "Creatures";
+const page = "locations";
 ---
 
 <BaseLayout pageTitle={pageTitle} page={page}>
@@ -23,7 +23,7 @@ const page = "Creatures";
     </article>
 
     <Image
-      src={rlyeh}
+      src={madness}
       alt={`A dipiction of ${locationData[1].name}`}
       class="location-img"
     />
@@ -36,7 +36,7 @@ const page = "Creatures";
     grid-template-columns:
       minmax(2em, 1fr)
       minmax(0, auto); 
-      repeat(2, minmax(0, 38rem))
+      repeat(2, minmax(0, 36rem))
       minmax(2em, 1fr);
 
     align-items: center;
@@ -63,10 +63,11 @@ const page = "Creatures";
   .location-content {
     grid-area: content;
     padding-inline: var(--space-xl);
+    max-width: 60ch;
 
     p {
       max-width: 55ch;
-      text-wrap: balance;
+    text-wrap: balance;
     }
   }
 
