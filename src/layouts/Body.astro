@@ -1,20 +1,20 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { Image, getImage } from "astro:assets";
 
-import bgHome from '../assets/background-images/home/bg-home.png';
-import bgCreatures from '../assets/background-images/creatures/bg-creatures.png';
-import bgLocations from '../assets/background-images/locations/bg-locations.png';
-import bgPeople from '../assets/background-images/people/bg-people.png';
-import texture from '../assets/texture/texture.png';
+import bgHome from "../assets/background-images/home/bg-home.png";
+import bgCreatures from "../assets/background-images/creatures/bg-creatures.png";
+import bgLocations from "../assets/background-images/locations/bg-locations.png";
+import bgPeople from "../assets/background-images/people/bg-people.png";
+import texture from "../assets/texture/texture.png";
 
 const { page } = Astro.props;
 
 let bgImage;
-if (page.toLowerCase() === 'home') {
+if (page.toLowerCase() === "home") {
   bgImage = await getImage({ src: bgHome });
-} else if (page.toLowerCase() === 'creatures') {
+} else if (page.toLowerCase() === "creatures") {
   bgImage = await getImage({ src: bgCreatures });
-} else if (page.toLowerCase() === 'locations') {
+} else if (page.toLowerCase() === "locations") {
   bgImage = await getImage({ src: bgLocations });
 } else {
   bgImage = await getImage({ src: bgPeople });
@@ -22,7 +22,7 @@ if (page.toLowerCase() === 'home') {
 ---
 
 <body style={`background-image: url('${bgImage.src}')`}>
-  <Image src={texture} alt="" />
+  <Image src={texture} alt="" loading="eager" transition:animate="fade" />
   <slot />
 </body>
 
@@ -33,6 +33,7 @@ if (page.toLowerCase() === 'home') {
     overflow-x: hidden;
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
     position: relative;
   }
 
@@ -44,57 +45,6 @@ if (page.toLowerCase() === 'home') {
     pointer-events: none;
 
     opacity: 0.75;
-    z-index: 9999;
+    z-index: 10000000;
   }
-
-  /* 
-  .home {
-    background-image: url(/background-images/home/bg-home.png);
-  }
-
-  .creatures {
-    background-image: url(/background-images/creatures/bg-creatures.jpg);
-  }
-
-  .people {
-    background-image: url(/background-images/people/bg-people.jpg);
-  }
-
-  .places {
-    background-image: url(/background-images/places/bg-places.jpg);
-  }
-  @media (max-width: 48rem) {
-    .home {
-      background-image: url(/background-images/home/bg-home-tablet.jpg);
-    }
-
-    .creatures {
-      background-image: url(/background-images/creatures/bg-creatures-tablet.jpg);
-    }
-
-    .people {
-      background-image: url(/background-images/people/bg-people-tablet.jpg);
-    }
-
-    .places {
-      background-image: url(/background-images/places/bg-places-tablet.jpg);
-    }
-  }
-
-  @media (max-width: 30rem) {
-    .home {
-      background-image: url(/background-images/home/bg-home-mobile.jpg);
-    }
-
-    .creatures {
-      background-image: url(/background-images/creatures/bg-creatures-mobile.jpg);
-    }
-    .people {
-      background-image: url(/background-images/people/bg-people-mobile.jpg);
-    }
-
-    .places {
-      background-image: url(/background-images/places/bg-places-mobile.jpg);
-    }
-  } */
 </style>

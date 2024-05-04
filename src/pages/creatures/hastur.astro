@@ -1,4 +1,20 @@
 ---
+import ContainerPage from "../../layouts/ContainerPage.astro";
+import combinedData from "../../data/combinedData.json";
+import imgSrc from "../../assets/creatures/hastur.png";
+
+const pageTitle = "Hastur";
+const page = "Creatures";
+---
+
+<ContainerPage
+  data={combinedData}
+  pageTitle={pageTitle}
+  page={page}
+  src={imgSrc}
+/>
+
+<!-- ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import hastur from '../../assets/creatures/hastur.png';
@@ -121,4 +137,4 @@ const page = 'Creatures';
       align-items: center;
     }
   }
-</style>
+</style> -->

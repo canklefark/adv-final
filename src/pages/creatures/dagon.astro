@@ -1,4 +1,20 @@
 ---
+import ContainerPage from "../../layouts/ContainerPage.astro";
+import combinedData from "../../data/combinedData.json";
+import imgSrc from "../../assets/creatures/dagon.png";
+
+const pageTitle = "Dagon";
+const page = "Creatures";
+---
+
+<ContainerPage
+  data={combinedData}
+  pageTitle={pageTitle}
+  page={page}
+  src={imgSrc}
+/>
+
+<!-- ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import dagon from '../../assets/creatures/dagon.png';
@@ -122,4 +138,4 @@ const page = 'Creatures';
       align-items: center;
     }
   }
-</style>
+</style> -->

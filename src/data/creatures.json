@@ -1,19 +1,16 @@
 [
   {
     "name": "Chuthlu",
-    "image": "../../assets/creatures/dagon.png",
     "description": "Cthulhu resembles a grotesque caricature of humanity, with an octopus head, scaly body, and wings. Descriptions  emphasize its immense size, often comparing it to a mountain. Cthulhu slumbers beneath the sea in the sunken city of R'lyeh, but cultists plot to bring him forth and herald a reign of madness. The mere sight of Cthulhu can drive the sanest mind to gibbering madness.",
     "url": "/creatures"
   },
   {
     "name": "Hastur",
-    "image": "../../assets/creatures/dagon.png",
     "description": "The King in Yellow, Hastur is a shapeless entity of pure malice. Writings describe him as a tentacular mass or a being of shifting smoke. Hastur embodies chaos and represents the breaking down of reality. His worship often involves forbidden symbols and plays, driving cultists to violence and insanity.",
     "url": "/creatures/hastur"
   },
   {
     "name": "Dagon",
-    "image": "../../assets/creatures/dagon.png",
     "description": "The lurking menace of the deep, Dagon is a monstrous being with a humanoid upper body and a fish-like lower half. He dwells in the inky blackness of the ocean, often depicted as a god worshipped by degenerate human cults. Unlike Cthulhu, Dagon seems more actively malicious, driving his followers to madness and ritual sacrifice.",
     "url": "/creatures/dagon"
   }

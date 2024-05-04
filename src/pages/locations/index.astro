@@ -27,6 +27,8 @@ const page = "locations";
       src={rlyeh}
       alt={`A dipiction of ${locationData[0].name}`}
       class="location-img"
+      loading="eager"
+      transition:name="img-transition"
     />
   </main>
 </BaseLayout>
@@ -40,12 +42,6 @@ const page = "locations";
       minmax(2em, 1fr);
 
     align-items: center;
-
-    /* outline: 1px solid limegreen; */
-
-    & > * {
-      /* outline: 1px solid red; */
-    }
   }
 
   .grid-template {

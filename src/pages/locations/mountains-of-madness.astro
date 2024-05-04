@@ -6,6 +6,7 @@ import locationData from "../../data/locations.json";
 
 import madness from "../../assets/locations/madness.png";
 import IconTabs from "../../components/IconTabs.astro";
+import { slide } from "astro:transitions";
 
 const pageTitle = "Mountains of Madness";
 const page = "locations";
@@ -27,6 +28,8 @@ const page = "locations";
       src={madness}
       alt={`A dipiction of ${locationData[1].name}`}
       class="location-img"
+      loading="eager"
+      transition:name="img-transition"
     />
   </main>
 </BaseLayout>
@@ -40,12 +43,6 @@ const page = "locations";
       minmax(2em, 1fr);
 
     align-items: center;
-
-    /* outline: 1px solid limegreen; */
-
-    & > * {
-      /* outline: 1px solid red; */
-    }
   }
 
   .grid-template {

@@ -1,14 +1,14 @@
 ---
-const { tabData, ariaLabel, activeCreature } = Astro.props;
+const { tabData, ariaLabel, activeTabName } = Astro.props;
 ---
 
-<nav class="tab-list | flex" role="tablist" aria-label={ariaLabel}>
+<nav class="tab-list | flex" aria-label={ariaLabel}>
   {
     tabData.map((data) => (
       <a
         class="ff-body uppercase text-dark fw-bold"
         href={data.url}
-        data-active-tab={activeCreature === data.name ? "true" : "false"}
+        data-active-tab={activeTabName === data.name ? "true" : "false"}
         data-image={`${data.name.toLowerCase()}-image`}>
         {data.name}
       </a>
@@ -24,12 +24,12 @@ const { tabData, ariaLabel, activeCreature } = Astro.props;
   a {
     position: relative;
     text-align: center;
+    line-height: 1.2;
     background-color: var(--clr-base);
     width: 100%;
     padding: var(--space-s) var(--space-m);
     border-radius: 9px 9px 0 0;
     box-shadow: 0px 0px 10px 2px var(--shadow-primary);
-    display: block;
     transform: translateY(0.4rem);
     transition: transform 0.3s ease;
 
@@ -55,6 +55,13 @@ const { tabData, ariaLabel, activeCreature } = Astro.props;
       background-color: var(--clr-base-l-1);
       box-shadow: 0px 0px 10px 4px var(--shadow-primary);
       z-index: 4;
+    }
+  }
+
+  @media (max-width: 35rem) {
+    a {
+      padding: var(--space-xs) var(--space-s);
+      font-size: 14px;
     }
   }
 </style>

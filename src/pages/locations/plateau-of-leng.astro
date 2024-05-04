@@ -1,14 +1,15 @@
 ---
-import { Image } from 'astro:assets';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from "astro:assets";
+import { slide } from "astro:transitions";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-import locationData from '../../data/locations.json';
+import locationData from "../../data/locations.json";
 
-import plateau from '../../assets/locations/plateau.png';
-import IconTabs from '../../components/IconTabs.astro';
+import plateau from "../../assets/locations/plateau.png";
+import IconTabs from "../../components/IconTabs.astro";
 
-const pageTitle = 'Plateau of Leng';
-const page = 'locations';
+const pageTitle = "Plateau of Leng";
+const page = "locations";
 ---
 
 <BaseLayout pageTitle={pageTitle} page={page}>
@@ -23,7 +24,13 @@ const page = 'locations';
       </article>
     </div>
 
-    <Image src={plateau} alt={`A dipiction of ${locationData[2].name}`} class="location-img" />
+    <Image
+      src={plateau}
+      alt={`A dipiction of ${locationData[2].name}`}
+      class="location-img"
+      loading="eager"
+      transition:name="img-transition"
+    />
   </main>
 </BaseLayout>
 
@@ -36,19 +43,13 @@ const page = 'locations';
       minmax(2em, 1fr);
 
     align-items: center;
-
-    /* outline: 1px solid limegreen; */
-
-    & > * {
-      /* outline: 1px solid red; */
-    }
   }
 
   .grid-template {
     grid-template-areas:
-      '. title title .'
-      '. content image image'
-      '. content image image';
+      ". title title ."
+      ". content image image"
+      ". content image image";
   }
 
   .location-title {
@@ -92,9 +93,9 @@ const page = 'locations';
 
     .grid-template {
       grid-template-areas:
-        'title'
-        'image'
-        'content';
+        "title"
+        "image"
+        "content";
     }
 
     .location-title {
