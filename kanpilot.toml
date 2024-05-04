@@ -29,10 +29,10 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "nxf2aqorbf4uwxyopecf2rjk"
-  title = "Fix location tabs non-hidden word wrapping"
-  description = "<p>The words should either appear outside of the container so they don't make it different sizes based on the text or the a tag itself should be constrained to a consistent width</p>"
-  tag = "bug"
+  id = "mt95puso2gwjio0bucqs10gp"
+  title = "Add space between h1 and image on creatures pages breakpoint"
+  description = "<p></p>"
+  tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
   checkList = [ ]
@@ -40,10 +40,32 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "vsx1gxlnq91b253brwwn9cir"
-  title = "Location page doesn't stop at max-width"
-  description = "<p></p>"
-  tag = "bug"
+  id = "zqdub5l2n940frfzuxhjnyhk"
+  title = "Add space between h1 and image on people pages breakpoint"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "uvn30i7bita0g4lk49sm6nfj"
+  title = "Make h1 centered on creature pages"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "hz2cnyoab4qbtc2uf9vb451d"
+  title = "Make h1 centered on people pages"
+  description = ""
+  tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
   checkList = [ ]
@@ -119,6 +141,28 @@ name = "Done"
   title = "Change all page attributes to reflect proper background image"
   description = ""
   tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "nxf2aqorbf4uwxyopecf2rjk"
+  title = "Fix location tabs non-hidden word wrapping"
+  description = "<p>The words should either appear outside of the container so they don't make it different sizes based on the text or the a tag itself should be constrained to a consistent width</p>"
+  tag = "bug"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "vsx1gxlnq91b253brwwn9cir"
+  title = "Location page doesn't stop at max-width"
+  description = "<p></p>"
+  tag = "bug"
   linkFiles = [ ]
   dueDate = ""
   checkList = [ ]
