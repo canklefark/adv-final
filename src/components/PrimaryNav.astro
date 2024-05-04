@@ -2,11 +2,8 @@
 import navData from "../data/site-map.json";
 ---
 
-<nav id="primary-navigation">
-  <ul
-    id="primary-navigation"
-    class="primary-navigation | list-none flex"
-    data-visible="false">
+<nav id="primary-navigation" data-visible="false">
+  <ul class="primary-navigation | list-none flex">
     {
       navData.map((item) => (
         <li>
