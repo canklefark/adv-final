@@ -7,7 +7,7 @@ import locationData from "../../data/locations.json";
 import rlyeh from "../../assets/locations/rlyeh.png";
 import IconTabs from "../../components/IconTabs.astro";
 
-const pageTitle = "R'lyeh"; // Change for each Creature
+const pageTitle = "R'lyeh";
 const page = "locations";
 ---
 
@@ -28,7 +28,6 @@ const page = "locations";
       alt={`A dipiction of ${locationData[0].name}`}
       class="location-img"
       loading="eager"
-      transition:name="img-transition"
     />
   </main>
 </BaseLayout>

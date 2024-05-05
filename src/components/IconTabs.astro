@@ -51,32 +51,6 @@ const { tabData, ariaLabel } = Astro.props;
         background-color: hsl(var(--base-d-2) / 1);
         transform: translateY(-5px);
       }
-
-      /* &::after {
-        content: "";
-        position: absolute;
-        bottom: -0.5em;
-        left: 0;
-        width: 100%;
-        font-size: var(--fs-s);
-        text-align: center;
-        line-height: 1.25;
-        color: var(--clr-light);
-        transform: translateY(100%);
-        transform-origin: bottom;
-      }
-
-      &:nth-child(1)::after {
-        content: "R'lyeh";
-      }
-
-      &:nth-child(2)::after {
-        content: "Mountains of Madness";
-      }
-
-      &:nth-child(3)::after {
-        content: "Plateau of Leng";
-      } */
     }
 
     img {
@@ -98,10 +72,5 @@ const { tabData, ariaLabel } = Astro.props;
         }
       }
     }
-  }
-
-  @media (hover) {
-    a::after{
-      display: none;
   }
 </style>
