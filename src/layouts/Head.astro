@@ -1,8 +1,8 @@
 ---
-import "@fontsource/bluu-next/700.css";
+import '@fontsource/bluu-next/700.css';
 // Supports weights 400-800
-import "@fontsource-variable/eb-garamond";
-import { ViewTransitions } from "astro:transitions";
+import '@fontsource-variable/eb-garamond';
+import { ViewTransitions } from 'astro:transitions';
 
 const { pageTitle } = Astro.props;
 ---
@@ -14,7 +14,9 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <ViewTransitions />
+    <!-- <ViewTransitions /> -->
   </head>
   <slot />
+
+
 </html>
