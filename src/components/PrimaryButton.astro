@@ -4,8 +4,8 @@ const { btnText, btnUrl } = Astro.props;
 
 <a
   href={btnUrl}
-  class="primary-button | uppercase fs-xl bg-base text-dark radius-full"
-  ><span class="text-center">{btnText}</span></a
+  class="primary-button | uppercase fs-xl fw-bold bg-base text-dark radius-full text-center"
+  ><span>{btnText}</span></a
 >
 
 <style>
@@ -18,9 +18,21 @@ const { btnText, btnUrl } = Astro.props;
     padding: 0 2em;
     aspect-ratio: 1;
     text-decoration: none;
+    line-height: 1.2;
+    outline: none;
 
     > span {
       max-width: 15ch;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      background-image: url(../assets/shared/necronomicon.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
 
     &::after {
@@ -29,7 +41,7 @@ const { btnText, btnUrl } = Astro.props;
       z-index: -1;
       width: 100%;
       height: 100%;
-      background: hsl(var(--accent) / 0.15);
+      background: hsl(var(--accent) / 0.2);
       border-radius: 50%;
       opacity: 0;
       transition:
@@ -40,7 +52,7 @@ const { btnText, btnUrl } = Astro.props;
     &:hover::after,
     &:focus::after {
       opacity: 1;
-      transform: scale(1.5);
+      transform: scale(1.3);
     }
   }
 </style>

@@ -50,21 +50,20 @@ const { tabData, ariaLabel } = Astro.props;
       &:focus-within {
         background-color: hsl(var(--base-d-2) / 1);
         transform: translateY(-5px);
-        rotate: -2deg;
       }
 
-      &::after {
+      /* &::after {
         content: "";
         position: absolute;
-        bottom: -0.5em; /* Ignored for transform positioning */
+        bottom: -0.5em;
         left: 0;
         width: 100%;
         font-size: var(--fs-s);
         text-align: center;
         line-height: 1.25;
         color: var(--clr-light);
-        transform: translateY(100%); /* Move up by its own height */
-        transform-origin: bottom; /* Set transform origin to bottom */
+        transform: translateY(100%);
+        transform-origin: bottom;
       }
 
       &:nth-child(1)::after {
@@ -77,7 +76,7 @@ const { tabData, ariaLabel } = Astro.props;
 
       &:nth-child(3)::after {
         content: "Plateau of Leng";
-      }
+      } */
     }
 
     img {
@@ -95,7 +94,6 @@ const { tabData, ariaLabel } = Astro.props;
         &:hover,
         &:focus-within {
           transform: translateY(-3px);
-          rotate: 0deg;
           scale: 1.05;
         }
       }

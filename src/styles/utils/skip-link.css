@@ -1,8 +1,8 @@
 .skip-link {
 	position: absolute;
 	z-index: 9999;
-	background: var(--clr-neutral);
-	color: var(--clr-base);
+	background: var(--clr-base);
+	color: var(--clr-dark);
 	padding: .5em 1em;
 	margin-inline: auto;
 	transform: translateY(-100%);
@@ -11,4 +11,5 @@
 
 .skip-link:focus {
 	transform: translateY(0);
+	outline: none;
 }

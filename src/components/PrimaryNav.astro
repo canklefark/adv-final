@@ -46,8 +46,12 @@ import navData from "../data/site-map.json";
       scale: 0.95;
       opacity: 0.3;
 
-      > a {
+      a {
         text-decoration: line-through;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
 
