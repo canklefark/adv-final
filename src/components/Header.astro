@@ -1,13 +1,16 @@
 ---
-import PrimaryNav from '../components/PrimaryNav.astro';
-import logo from '../assets/shared/logo.svg';
+import PrimaryNav from "../components/PrimaryNav.astro";
+import logo from "../assets/shared/logo.svg";
 ---
 
 <header class="primary-header | flex space-between items-middle">
   <div class="logo">
     <img src={logo.src} alt="Discover Lovecraft's Mythos Logo" />
   </div>
-  <button class="mobile-nav-toggle" aria-controls="primary-navigation" data-visible="false">
+  <button
+    class="mobile-nav-toggle"
+    aria-controls="primary-navigation"
+    data-visible="false">
     <span class="visually-hidden" aria-expanded="false">Menu</span>
   </button>
   <PrimaryNav />
@@ -56,7 +59,7 @@ import logo from '../assets/shared/logo.svg';
       aspect-ratio: 1;
       border: 0;
 
-      &[aria-expanded='true'] {
+      &[aria-expanded="true"] {
         background-image: url(/icon-close.svg);
       }
     }
@@ -64,18 +67,18 @@ import logo from '../assets/shared/logo.svg';
 </style>
 
 <script>
-  const nav = document.querySelector('#primary-navigation');
-  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const nav = document.querySelector("#primary-navigation");
+  const navToggle = document.querySelector(".mobile-nav-toggle");
 
-  navToggle.addEventListener('click', () => {
-    const visibility = nav.getAttribute('data-visible');
+  navToggle.addEventListener("click", () => {
+    const visibility = nav.getAttribute("data-visible");
 
-    if (visibility === 'false') {
-      nav.setAttribute('data-visible', 'true');
-      navToggle.setAttribute('aria-expanded', 'true');
+    if (visibility === "false") {
+      nav.setAttribute("data-visible", "true");
+      navToggle.setAttribute("aria-expanded", "true");
     } else {
-      nav.setAttribute('data-visible', 'false');
-      navToggle.setAttribute('aria-expanded', 'false');
+      nav.setAttribute("data-visible", "false");
+      navToggle.setAttribute("aria-expanded", "false");
     }
   });
 </script>
